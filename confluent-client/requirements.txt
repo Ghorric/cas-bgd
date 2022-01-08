@@ -1,0 +1,15 @@
+# [START confluent_requirements]
+requests~=2.26.0
+certifi
+confluent-kafka[avro,json,protobuf]>=1.4.2
+# [END confluent_requirements]
+
+# [START redis_requirements]
+Flask==1.1.2
+gunicorn==20.1.0
+redis==3.5.3
+# [END redis_requirements]
+
+# [START vision_requirements]
+google-cloud-vision
+# [END vision_requirements]

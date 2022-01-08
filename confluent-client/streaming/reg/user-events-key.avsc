@@ -1,0 +1,13 @@
+{
+  "doc": "User related events  (key schema)",
+  "fields": [
+    {
+      "doc": "ID",
+      "name": "id",
+      "type": "string"
+    }
+  ],
+  "name": "user_event",
+  "namespace": "ch.wengle.bfh.bigdata",
+  "type": "record"
+}

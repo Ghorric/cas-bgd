@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: create-kafka-schema
+spec:
+  containers:
+  - name: create-kafka-schema
+    image: "wengle/confluent-client:latest"
+    # Always IfNotPresent
+    imagePullPolicy: IfNotPresent
+#    imagePullPolicy: IfNotPresent
+    command: [ "/bin/bash", "-c", "--" ]
+    args: [ "ls -al /secrets/confluent.config && cd streaming && ./create-schemas-for-user-events-topic.sh" ]
+#    args: [ "ls -al /secrets/confluent.config && cd streaming && ./topic-mgt.sh -c container -a list-schemas" ]
+    volumeMounts:
+      - mountPath: "/secrets"
+        name: img-secrets
+        readOnly: true
+  volumes:
+    - name: img-secrets
+      secret:
+        secretName: img-secrets
+  restartPolicy: Never

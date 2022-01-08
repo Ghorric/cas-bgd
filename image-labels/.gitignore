@@ -1,0 +1,9 @@
+ccloud-venv/
+venv/
+.ipynb_checkpoints
+**/*.lock
+**/*.pyc
+
+secrets/
+/cas-bgd-chart/charts/
+/cas-bgd-chart/templates/secrets/

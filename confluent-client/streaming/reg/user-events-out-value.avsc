@@ -1,0 +1,33 @@
+{
+  "doc": "User related events (value schema)",
+  "fields": [
+    {
+      "doc": "Unique ID for every user",
+      "name": "user_id",
+      "type": "string"
+    },
+    {
+      "doc": "Display name for the user",
+      "name": "user_name",
+      "type": "string"
+    },
+    {
+      "doc": "Event Type",
+      "name": "action",
+      "type": "string"
+    },
+    {
+      "doc": "Headers related to the event",
+      "name": "headers",
+      "type": {"type": "map", "values": "string"}
+    },
+    {
+      "doc": "Payload related to the event",
+      "name": "payload",
+      "type": "string"
+    }
+  ],
+  "name": "user_event",
+  "namespace": "ch.wengle.bfh.bigdata",
+  "type": "record"
+}
