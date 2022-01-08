@@ -1,6 +1,7 @@
-===== wengle/jupyter-finance =====
+# cas-bgd-scripts
 
-=== Start with Docker ===
+#### Start with Docker
+```
 Root Folder:
     GitBash: cd /c/Users/Leoric/OneDrive/code/cas-bgd/cas-bgd-scripts
     WSL2: cd //mnt/c/Users/Leoric/OneDrive/code/cas-bgd/cas-bgd-scripts
@@ -37,9 +38,10 @@ Run:
 
     # Build & Restart & k8s list
     ./helm-start.sh -b -r && k get all
+```
 
-
-=== Run components in dev environment (e.g., PyCharm) ===
+#### Run components in dev environment (e.g., PyCharm)
+```
 Run img_label_processor:
     REDIS_HOST=cloud.redislabs.com ; REDIS_PORT=16666 ; REDIS_PASSWORD=<pw> ; \
         PEXEL_TOKEN=<secret token>
@@ -49,5 +51,5 @@ Run img_label_processor:
     OR the same in the container
     ./helm-exec.sh
     ./run-img-label-processor.sh -t \'user-events\' -c \'"index < 1"\'
-
+```
 
